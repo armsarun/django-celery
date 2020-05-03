@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'fisdom-demo.herokuapp.com']
 
@@ -89,9 +89,7 @@ if DEBUG:
 else:
 
     import dj_database_url
-
     # set server database configuration here
-
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
