@@ -1,4 +1,4 @@
-                                          <h2>Fisdom Demo</h2> 
+                                          ##Fisdom Demo
 <hr>
 
 ### Local Development setup:
@@ -19,15 +19,15 @@
   
   ***step 5:*** Create .env file in root folder and add below keys
   
-            >DATABASE_NAME = ''
-            >DATABASE_USER = ''
-            >DATABASE_PASSWORD = ''
-            >DATABASE_HOST = '127.0.0.1'
-            >DATABASE_PORT = ''
-            >SECRET= ''
-            >CELERY_BROKER_URL = ''
-            >CELERY_RESULT_BACKEND = ''
-            >DEBUG = True
+            DATABASE_NAME = ''
+            DATABASE_USER = ''
+            DATABASE_PASSWORD = ''
+            DATABASE_HOST = '127.0.0.1'
+            DATABASE_PORT = ''
+            SECRET= ''
+            CELERY_BROKER_URL = ''
+            CELERY_RESULT_BACKEND = ''
+            DEBUG = True
   
   ***step 6:*** Start your django app
             ```python manage.py runserver``` 
@@ -39,7 +39,7 @@
             > Run celery worker
             ``` celery -A core worker -l info -B```  
             ****Note:****
-            ***Celery need to start after activating virtualenv and must run in core 
+            ***Celery need to be started after activating virtualenv and must run the above in core 
             folder location***
              
                   
