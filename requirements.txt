@@ -6,3 +6,4 @@ redis==3.5.0
 requests==2.23.0
 gunicorn
 django-heroku
+whitenoise
