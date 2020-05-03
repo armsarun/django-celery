@@ -1,15 +1,11 @@
-<p align="center">
-  <h2>Fisdom Demo</h2> 
-</p>
+                                          <h2>Fisdom Demo</h2> 
 <hr>
 
 ### Local Development setup:
 
-***step 1:***  Install [virutalenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) 
+***step 1:***  Install [virutalenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
-                ```mkvirtualenv myapp```
-                
-                > By default env will be activate if it's not use below command
+                ```mkvirtualenv myapp```            
                 
                 ``` workon myapp ```
                 
