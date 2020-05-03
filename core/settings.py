@@ -156,7 +156,5 @@ if DEBUG:
     CELERY_RESULT_SERIALIZER = 'json'
     CELERY_TIMEZONE = 'Asia/Kolkata'
 
-
-if not DEBUG:
-    MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
