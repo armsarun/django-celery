@@ -1,5 +1,4 @@
 .env
-migrations/
 *.pyc
 *.db
 *.rdb
