@@ -1,5 +1,5 @@
 <p text-align='center'>
- <h2> Fisdom </h2>
+ <h2> Fisdom Demo</h2>
 </p>
 <hr>
 
