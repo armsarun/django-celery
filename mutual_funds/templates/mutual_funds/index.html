@@ -1,0 +1,28 @@
+{% extends "mutual_funds/base.html" %}
+{% block content %}
+    <div class="d-flex flex-column align-items-center h-100">
+        <h3>Mutual funds</h3>
+            <table class="table table-striped" style="text-align: center">
+                <thead class="thead-dark">
+                <tr>
+                    <td>ISIN</td>
+                    <td>Name</td>
+                </tr>
+                </thead>
+                <tbody class="table-striped ">
+                {% for mutual_fund in mutual_funds %}
+                    <tr>
+                        <td><a href="{% url 'viewisin' isin=mutual_fund.isin %}"> {{ mutual_fund.isin }}</a></td>
+                        {% if mutual_fund.name %}
+                            <td>{{ mutual_fund.name }} </td>
+                        {% else %}
+                            <td> Name is not Available</td>
+                        {% endif %}
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}

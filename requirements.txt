@@ -1,0 +1,8 @@
+celery==4.4.2
+Django==2.2
+psycopg2-binary==2.8.5
+python-decouple==3.3
+redis==3.5.0
+requests==2.23.0
+gunicorn
+django-heroku

@@ -1,0 +1,67 @@
+{% extends 'mutual_funds/base.html' %}
+{% load static %}
+{% block extra_css %}
+{% endblock %}
+{% block content %}
+    <div class="d-flex flex-column justify-content-center align-items-center h-100">
+        <canvas id="canvas"></canvas>
+    </div>
+{% endblock %}
+{% block footer_js %}
+
+    <script src="{% static 'js/chart.js' %}"></script>
+    <script>
+        let chart_data = {{ data | safe }};
+        let isin = {{ isin | safe }};
+    </script>
+    <script>
+        var timeFormat = 'DD/MM/YYYY';
+
+        var config = {
+            type: 'line',
+            data: {
+                datasets: [
+
+                    {
+                        label: 'Price',
+                        data: chart_data,
+                        fill: false,
+                        borderColor: 'red'
+                    }
+
+                ]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: isin + ' price history'
+                },
+                scales: {
+                    xAxes: [{
+                        type: "time",
+                        time: {
+                            format: timeFormat,
+                            tooltipFormat: 'll'
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Date'
+                        }
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Rate'
+                        }
+                    }]
+                }
+            }
+        };
+
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myLine = new Chart(ctx, config);
+        };
+    </script>
+{% endblock %}
