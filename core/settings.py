@@ -164,8 +164,8 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, "core/static"),
 
 # Celery settings
 if DEBUG:
-    CELERY_BROKER_URL = config('CELERY_BROKER_URL')
-    CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND')
+    # CELERY_BROKER_URL = config('CELERY_BROKER_URL')
+    # CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND')
     CELERY_ACCEPT_CONTENT = ['application/json']
     CELERY_TASK_SERIALIZER = 'json'
     CELERY_RESULT_SERIALIZER = 'json'
