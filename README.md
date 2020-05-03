@@ -5,9 +5,9 @@
 
 ***step 1:***  Install [virutalenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
-                ```mkvirtualenv myapp```            
+                mkvirtualenv myapp           
                 
-                ``` workon myapp ```
+                workon myapp 
                 
  ***step 2:***  Install all packages
  
@@ -39,7 +39,7 @@
             > Run celery worker
             ``` celery -A core worker -l info -B```  
             ****Note:****
-            ***Celery need to be started after activating virtualenv and must run the above in core 
+            ***Celery need to be started after activating virtualenv(```workon myapp```) and must run the above in core 
             folder location***
              
                   
