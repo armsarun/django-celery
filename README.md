@@ -1,8 +1,10 @@
-#Fisdom Demo 
+<p align="center">
+ # Fisdom Demo 
+</p>
 
-###Local Development setup:
+### Local Development setup:
 
-**step 1:**
+**step 1:** 
   
  
 ###Heroku Deployment:
