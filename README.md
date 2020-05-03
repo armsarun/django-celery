@@ -1,4 +1,6 @@
-                                          ##Fisdom Demo
+<p text-align='center'>
+ <h2> Fisdom </h2>
+</p>
 <hr>
 
 ### Local Development setup:
@@ -6,8 +8,8 @@
 ***step 1:***  Install [virutalenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 
                 mkvirtualenv myapp           
-                
-                workon myapp 
+ *** By default virutal env will be activated else use below command***             
+                ```workon myapp```
                 
  ***step 2:***  Install all packages
  
