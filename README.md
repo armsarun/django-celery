@@ -13,7 +13,7 @@
                 
  ***step 2:***  Install all packages
  
-                ```pip install -r requirements.txt```
+                pip install -r requirements.txt
                 
   ***step 3:*** Create New [Postgresql](https://www.postgresql.org/download/linux/)  Database. Install if is not available
                 
