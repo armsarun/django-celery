@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 try:
-   DEBUG = config('DEBUG')
+    DEBUG = config('DEBUG')
 except UndefinedValueError:
     DEBUG = False
 
@@ -77,23 +77,23 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-if DEBUG:
 
-    pass
-    # DATABASES = {
-    #     'default': {
-    #         'ENGINE': 'django.db.backends.postgresql',
-    #         'NAME': config('DATABASE_NAME'),
-    #         'USER': config('DATABASE_USER'),
-    #         'PASSWORD': config('DATABASE_PASSWORD'),
-    #         'HOST': config('DATABASE_HOST'),
-    #         'PORT': config('DATABASE_PORT'),
-    #     }
-    # }
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('DATABASE_NAME'),
+            'USER': config('DATABASE_USER'),
+            'PASSWORD': config('DATABASE_PASSWORD'),
+            'HOST': config('DATABASE_HOST'),
+            'PORT': config('DATABASE_PORT'),
+        }
+    }
 
 else:
 
     import dj_database_url
+
     # set server database configuration here
     DATABASES = {
         "default": {
