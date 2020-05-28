@@ -14,7 +14,7 @@ import os
 
 from celery.schedules import crontab
 
-from decouple import config
+from decouple import config, UndefinedValueError
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,7 +26,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+try:
+   DEBUG = config('DEBUG')
+except UndefinedValueError:
+    DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'fisdom-demo.herokuapp.com']
 
